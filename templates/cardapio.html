@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for message in messages %}
+                <div class="alert alert-danger flash-message">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endwith %}
+
+    <h1>Cardápio</h1>
+
+    {% for categoria in resposta %}
+        <h2>{{ categoria['nome'] }}</h2>
+        <div class="grid3">
+            {% for produto in categoria['produtos'] %}
+                <div class="grid3-item">
+                    <h3>{{ produto['nome'] }}</h3 class = "nome_produto">
+                    <h4> R${{ produto['valorUnitario'] }}</h4 class = "preco">
+                    <img src="{{ produto['fotoUrl'] }}" alt="{{ produto }}">
+                    <form action="/carrinho/add" method="POST">
+                        <input type="hidden" name="produto_id" value="{{ produto['id'] }}">
+                        <input type="submit" value="Adicionar ao Carrinho" class = "Adicionar_carrinho">
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+{% endblock %}
