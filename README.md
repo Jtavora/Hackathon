@@ -45,26 +45,27 @@ Após isso, foram montadas as páginas:
 
 
  1. Inicial
-
+        
+        possui um header que redireciona para as outras páginas.
+ 
  2. Cardápio
+
+    Recebe uma lista de .json, que pode ser interpretada pelo Python como dicionário, e então mostra esta lista em forma de "cardápio", apresentado a classe da comida/bebida, a imagem e o custo unitário.
+
+    Também possui um botão embaixo de cada item, escrito "Adicionar ao Carrinho". Uma vez que o botão do item é pressionado, é possível ir até o carrinho para acompanhar os itens.
 
  3. Carrinho
 
+    Os itens serão apresentados por suas imagens e o preço total dos produtos adicionados é apresentado no final, dando opção ao usuário de finalizar suas compras.
+
  4. Login
+
+    A tela de login é conectada à API e possui duas caixas de input, para receber os dados do usuário e fazer seu reconhecimento no banco de dados dado pela API.
 
  5. Cadastro
 
-Onde a Inicial possui um header que redireciona para as outras páginas.
+    Caso o usuário não possua cadastro, ele poderá apertar no botão registrar, presente na tela de login ou no header, e então poderá criar seu próprio usuário.
 
-O Cardápio recebe uma lista de .json, que pode ser interpretada pelo Python como dicionário, e então mostra esta lista em forma de "cardápio", apresentado a classe da comida/bebida, a imagem e o custo unitário.
 
-O Cardápio também possui um botão embaixo de cada item, escrito "Adicionar ao Carrinho". Uma vez que o botão do item é pressionado, é possível ir até o carrinho para acompanhar os itens, que serão apresentados por suas imagens.
-
-No carrinho, o preço total dos produtos adicionados é apresentado no final.
-
-A tela de login é conectada à API e faz o reconhecimento do usuário.
-
-Caso o usuário não possua cadastro, ele poderá apertar no botão registrar, presente na tela de login ou no header, e então poderá criar seu próprio usuário.
-
-Após esta tela criada, decidiu-se utilizar o framework bootstrap para tornar alguns objetos presentes na aplicação um pouco mais bonitos e organizados.
+Após a criação destas telas, decidiu-se utilizar o framework bootstrap para tornar alguns objetos presentes na aplicação um pouco mais bonitos e organizados.
 
