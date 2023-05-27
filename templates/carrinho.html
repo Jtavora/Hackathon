@@ -4,13 +4,22 @@
 
     <h1>Carrinho</h1>
 
-    <div id="carrinho-itens" class = "grid3">
+    <div id="carrinho-itens" class="grid3">
         {% for produto_id, produto_info in produtos_api.items() %}
             <div class="carrinho-item">
                 <h3>{{ produto_info['nome'] }}</h3>
                 <img src="{{ produto_info['imagem'] }}" alt="{{ produto_info['nome'] }}">
+                <p>Preço: R$ {{ produto_info['valorUnitario'] }}</p>
             </div>
         {% endfor %}
+    </div>
+
+    <h2>Total do Pedido: R$ {{ total_pedido }}</h2>
+    
+    <div style="display: flex; justify-content: center;">
+        <form action="/submit_pedido" method="POST">
+            <a href="/checkout" style="color: blue"><strong>Enviar pedido</strong></a>
+        </form>
     </div>
 
 {% endblock %}

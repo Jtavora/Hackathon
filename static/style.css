@@ -369,6 +369,24 @@ img {
   }
 }
 
+.Carrinho_Input{
+  text-align: center;
+}
+
+.info_ped {
+  font-size: 20px;
+  margin-top: 50px;
+  column-count: 1; /* Definindo 1 coluna */
+  column-gap: 50px; /* Espaçamento entre as colunas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoped {
+  break-inside: avoid; /* Evita que os itens sejam divididos em várias colunas */
+}
 
 
 

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Checkout</h1>
+
+    <h2>Total da Compra: R$ {{ total_pedido }}</h2>
+
+    <h3>Opções de Pagamento:</h3>
+    <div style="display: flex; justify-content: center;">
+        <form action="/checkout" method="POST">
+            <input type="radio" id="pix" name="pagamento" value="pix">
+            <label for="pix">PIX</label><br>
+
+            <input type="radio" id="cartao" name="pagamento" value="cartao">
+            <label for="cartao">Cartão de Crédito</label><br>
+
+            <input type="radio" id="dinheiro" name="pagamento" value="dinheiro">
+            <label for="dinheiro">Dinheiro</label><br>
+
+            <input type="hidden" name="total_pedido" value="{{ total_pedido }}"> <!-- Passa o valor total_pedido como um campo oculto -->
+
+            <button type="submit">Confirmar Pagamento</button>
+        </div>
+    </form>
+
+{% endblock %}

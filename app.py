@@ -44,6 +44,7 @@ class CarrinhoItem:
         self.foto_url = foto_url
 
 carrinho_produtos = []
+total_pedido = 0
 
 # Rota para adicionar um item ao carrinho
 @app.route('/carrinho/add', methods=['POST'])
@@ -103,13 +104,13 @@ def login():
 
 @app.route("/carrinho")
 def carrinho():
+    global total_pedido
     name = request.args.get("name")
     url = 'https://hackarestaurante-os-conquistadores-da-disrupcao.azurewebsites.net'
     caminho = '/api/cliente/categorias/'
     r = requests.get(url + caminho)
-    resposta_api = r.json()  # Converte a resposta da API para formato JSON
+    resposta_api = r.json()
 
-    # Crie uma estrutura para armazenar os produtos com informações da API
     produtos_api = {}
 
     for item_do_carrinho in carrinho_produtos:
@@ -119,12 +120,24 @@ def carrinho():
                 if produto['id'] == int(item_do_carrinho):
                     produtos_api[produto['id']] = {
                         'nome': produto['nome'],
-                        'imagem': produto['fotoUrl']
+                        'imagem': produto['fotoUrl'],
+                        'valorUnitario': produto['valorUnitario']
                     }
+                    total_pedido += produto['valorUnitario']  # Adiciona o preço do produto ao total do pedido
 
-    return render_template('carrinho.html', produtos_api=produtos_api)
+    return render_template('carrinho.html', produtos_api=produtos_api, total_pedido=total_pedido)
 
+@app.route("/checkout",methods=['POST', 'GET'])
+def checkout():
+    global total_pedido
+    print(request.method, total_pedido)
+    if request.method == 'POST':
+        return render_template('info_pedido.html', pagamento=request.form['pagamento'])
+    return render_template('checkout.html', total_pedido=total_pedido)
 
+@app.route("/info_pedido")
+def info_pedido():
+    return render_template('info_pedido.html')
     
     # # Itera sobre as categorias da resposta da API
     # for categoria in resposta_api:
