@@ -1,4 +1,4 @@
-#Hackathon IDP
+# Hackathon IDP
 
 ## Equipe: Os Conquistadores da Disrupção
 
