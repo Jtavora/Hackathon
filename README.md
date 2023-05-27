@@ -14,7 +14,7 @@ Após o desafio delimitado, algumas soluções foram pensadas, entre elas:
 
  2. Criação de duas filas na frente da lanchonete, uma para que as pessoas que compraram pela web apenas retirem seus pedidos, e outra para pessoas que estjam realizando seu pedido na hora.
 
- 3. Disponibilização de um funcionário que ficará por conta apenas das entregas dos pedido, e outro que ficará responsável por checar os pedidos feitos pela web e esquentá-los, a fim de otimizar o andamento da fila.
+ 3. Disponibilização de um funcionário que ficará por conta apenas das entregas dos pedido, a fim de otimizar o andamento da fila.
 
  4. Uma aba em que o cliente possa acompanhar o preparo do pedido através de uma "linha do tempo", onde o pedido passará por 3 estágios: Pedido aceito, em preparo e pronto para ser retirado.
 
