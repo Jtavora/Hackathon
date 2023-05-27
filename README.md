@@ -66,6 +66,13 @@ Após isso, foram montadas as páginas:
 
     Caso o usuário não possua cadastro, ele poderá apertar no botão registrar, presente na tela de login ou no header, e então poderá criar seu próprio usuário.
 
+  6. Checkout
+
+   Apresenta o total do pedido e um input para selecionar a forma de pagamento. 
+ 
+ 7. Acompanhe seu pedido
+
+   Esta página apresenta o item do pedido, o valor do pedido, a forma de pagamento, o status do pedido e tempo de espera.
 
 Após a criação destas telas, decidiu-se utilizar o framework bootstrap para tornar alguns objetos presentes na aplicação um pouco mais bonitos e organizados.
 
