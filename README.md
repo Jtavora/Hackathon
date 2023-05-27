@@ -1,10 +1,10 @@
 #Hackathon IDP
 ## Equipe: Os Conquistadores da Disrupção
----
+
 ### Desafio Escolhido
 Foi escolhido o desafio do restaurante localizado no IDP por este ser um problema crescente, pois o número de alunos do IDP irá aumentar bastante nos próximos anos e semestre.
 
----
+
 ### Inovações
 Após o desafio delimitado, algumas soluções foram pensadas, entre elas:
 	1. O aluno (cliente) poder fazer o pedido durante a aula, e assim que o intervalo começar, seu pedido já tenha sido esquentado e esteja em uma estufa para manter seu calor, apenas aguardando sua busca.
@@ -12,7 +12,7 @@ Após o desafio delimitado, algumas soluções foram pensadas, entre elas:
 	3. Disponibilização de um funcionário que ficará por conta apenas das entregas dos pedido, e outro que ficará responsável por checar os pedidos feitos pela web e esquentá-los, a fim de otimizar o andamento da fila.
 	4. Uma aba em que o cliente possa acompanhar o preparo do pedido através de uma "linha do tempo", onde o pedido passará por 3 estágios: Pedido aceito, em preparo e pronto para ser retirado.
 	5. Uma aba na visão do lojista, onde ele possa facilmente trocar o estágio do pedido.
----
+
 ### Escolha de ferramentas
 Foram cogitadas diferentes ferramentas para a construção da proposta final.
 No entanto, optou-se por construir o front end utilizando Flask, uma biblíoteca de Python, para que a requisição da API e construção da aplicação fosse feita em uma única ferramenta, em conjunto com o HTML e CSS.
