@@ -28,18 +28,18 @@ No entanto, optou-se por construir o front end utilizando Flask, uma biblíoteca
 
 O request da API foi feito da seguinte forma:
 
-`url = 'https://hackarestaurante-os-conquistadores-da-disrupcao.azurewebsites.net'
-    caminho = 'end_point'
-    r = requests.get(url + caminho)
-    resposta_api = r.json() `
+`url = 'https://hackarestaurante-os-conquistadores-da-disrupcao.azurewebsites.net'`
+`caminho = 'end_point'`
+`r = requests.get(url + caminho)`
+`resposta_api = r.json() `
 
 O Flask teve um papel muito relevante, pois atua como servidor quando o usuário pede a página, e como client quando o flask faz requsições à API.
 
 Os caminhos para as páginas HTML foram definidos como:
 
-`@app.route("/html_escolhido")
-	def index():
-    return render_template('html_escolhido.html')`
+`@app.route("/html_escolhido")`
+`def index():`
+`return render_template('html_escolhido.html')`
 
 Após isso, foram montadas as páginas:
 
